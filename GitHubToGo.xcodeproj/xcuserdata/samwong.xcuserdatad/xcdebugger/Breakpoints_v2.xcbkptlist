@@ -10,11 +10,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Repo.swift"
-            timestampString = "435541178.236319"
+            timestampString = "435602798.225421"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "57"
-            endingLineNumber = "57">
+            startingLineNumber = "64"
+            endingLineNumber = "64">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
@@ -24,27 +24,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Repo.swift"
-            timestampString = "435541449.976518"
+            timestampString = "435602798.225421"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "53"
-            endingLineNumber = "53">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "Repo.swift"
-            timestampString = "435544340.156411"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "38"
-            endingLineNumber = "38"
-            landmarkName = "parseJSONDataIntoRepo(_:)"
-            landmarkType = "5">
+            startingLineNumber = "60"
+            endingLineNumber = "60">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>
