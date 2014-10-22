@@ -8,15 +8,22 @@
 
 import UIKit
 
-class RepoViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+class RepoViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, UISearchBarDelegate {
 
     var repo = [Repo]()
     
-    
+    @IBOutlet weak var searchBar: UISearchBar!
     @IBOutlet weak var tableView: UITableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        if NetworkController.controller.oAuthToken == nil {
+            //this improve the performance
+            dispatch_after(1, dispatch_get_main_queue(), {
+                NetworkController.controller.requestOAuthAccess()
+            })
+        }
         
         NetworkController.controller.fetchRepoInfo(nil, completionHandler: { (errorDescription, repo) -> (Void) in
             if errorDescription != nil {
@@ -28,6 +35,7 @@ class RepoViewController: UIViewController, UITableViewDataSource, UITableViewDe
             }
         })
         
+        self.searchBar.delegate = self
         self.tableView.dataSource = self
         self.tableView.delegate = self
     }
@@ -41,6 +49,25 @@ class RepoViewController: UIViewController, UITableViewDataSource, UITableViewDe
         
         cell.fullNameLabel.text = self.repo[indexPath.row].name
         return cell
+    }
+    
+    func searchBarSearchButtonClicked(searchBar: UISearchBar) {
+        let searchText = searchBar.text
+        
+        //hide search bar
+        searchBar.resignFirstResponder()
+        
+        println("Search Text is \(searchText)")
+        
+        NetworkController.controller.fetchRepoInfoWithSearchTerm(searchText, completionHandler: { (errorDescription, repo) -> (Void) in
+            if errorDescription != nil {
+                println("Error! searchBarSearchButtonClicked:fetchRepoInfoWithSearchTerm \(errorDescription) ")
+            } else {
+                self.repo = repo!
+                //this is an async process, must reload the tableview
+                self.tableView.reloadData()
+            }
+        })
     }
     
 }

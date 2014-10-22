@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5201C91F19F6D1410021DE8B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5201C91E19F6D1410021DE8B /* ViewController.swift */; };
 		520BE73119F5C7CB00331BFA /* Repo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 520BE73019F5C7CB00331BFA /* Repo.swift */; };
 		5222A7A119F5B52800F7DA5B /* NetworkController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5222A7A019F5B52800F7DA5B /* NetworkController.swift */; };
 		5222A7A919F5B88D00F7DA5B /* Repo.JSON in Resources */ = {isa = PBXBuildFile; fileRef = 5222A7A719F5B88D00F7DA5B /* Repo.JSON */; };
@@ -31,6 +32,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		5201C91E19F6D1410021DE8B /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		520BE73019F5C7CB00331BFA /* Repo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Repo.swift; path = ../Repo.swift; sourceTree = "<group>"; };
 		5222A7A019F5B52800F7DA5B /* NetworkController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkController.swift; sourceTree = "<group>"; };
 		5222A7A719F5B88D00F7DA5B /* Repo.JSON */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Repo.JSON; sourceTree = "<group>"; };
@@ -69,6 +71,7 @@
 		5222A7A219F5B52F00F7DA5B /* Controller Layer */ = {
 			isa = PBXGroup;
 			children = (
+				5201C91E19F6D1410021DE8B /* ViewController.swift */,
 				528814A519F57046005A362D /* SplitContainerViewController.swift */,
 				5288148719F56BE0005A362D /* RepoViewController.swift */,
 				5222A7A019F5B52800F7DA5B /* NetworkController.swift */,
@@ -256,6 +259,7 @@
 				5288148819F56BE0005A362D /* RepoViewController.swift in Sources */,
 				520BE73119F5C7CB00331BFA /* Repo.swift in Sources */,
 				52FF9F2219F5DC5F00323BA7 /* RepoCell.swift in Sources */,
+				5201C91F19F6D1410021DE8B /* ViewController.swift in Sources */,
 				5288148619F56BE0005A362D /* AppDelegate.swift in Sources */,
 				528814A619F57046005A362D /* SplitContainerViewController.swift in Sources */,
 			);
