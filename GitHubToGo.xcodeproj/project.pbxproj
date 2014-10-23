@@ -21,7 +21,7 @@
 		5288149019F56BE0005A362D /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5288148E19F56BE0005A362D /* LaunchScreen.xib */; };
 		5288149C19F56BE0005A362D /* GitHubToGoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5288149B19F56BE0005A362D /* GitHubToGoTests.swift */; };
 		528814A619F57046005A362D /* SplitContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 528814A519F57046005A362D /* SplitContainerViewController.swift */; };
-		5288AB3019F8455C006FC7B3 /* UserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5288AB2F19F8455C006FC7B3 /* UserViewController.swift */; };
+		5288AB3019F8455C006FC7B3 /* UserSearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5288AB2F19F8455C006FC7B3 /* UserSearchViewController.swift */; };
 		5288AB6319F84AEB006FC7B3 /* UserCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5288AB6219F84AEB006FC7B3 /* UserCell.swift */; };
 		528B72A819F9B0A4008F8031 /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 528B72A719F9B0A4008F8031 /* Extension.swift */; };
 		52AA7C9C19F89DFF00B03847 /* UserDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52AA7C9B19F89DFF00B03847 /* UserDetailViewController.swift */; };
@@ -60,7 +60,7 @@
 		5288149A19F56BE0005A362D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5288149B19F56BE0005A362D /* GitHubToGoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitHubToGoTests.swift; sourceTree = "<group>"; };
 		528814A519F57046005A362D /* SplitContainerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SplitContainerViewController.swift; sourceTree = "<group>"; };
-		5288AB2F19F8455C006FC7B3 /* UserViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserViewController.swift; sourceTree = "<group>"; };
+		5288AB2F19F8455C006FC7B3 /* UserSearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserSearchViewController.swift; sourceTree = "<group>"; };
 		5288AB6219F84AEB006FC7B3 /* UserCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserCell.swift; sourceTree = "<group>"; };
 		528B72A719F9B0A4008F8031 /* Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
 		52AA7C9B19F89DFF00B03847 /* UserDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserDetailViewController.swift; sourceTree = "<group>"; };
@@ -94,7 +94,7 @@
 				528814A519F57046005A362D /* SplitContainerViewController.swift */,
 				5288148719F56BE0005A362D /* RepoViewController.swift */,
 				5222A7A019F5B52800F7DA5B /* NetworkController.swift */,
-				5288AB2F19F8455C006FC7B3 /* UserViewController.swift */,
+				5288AB2F19F8455C006FC7B3 /* UserSearchViewController.swift */,
 				52FF8C1D19F85D6A00060B50 /* ViewController.swift */,
 				52AA7C9B19F89DFF00B03847 /* UserDetailViewController.swift */,
 				5265589419F9A9EB007736A6 /* RootViewController.swift */,
@@ -296,7 +296,7 @@
 			files = (
 				52FF8C1E19F85D6A00060B50 /* ViewController.swift in Sources */,
 				5222A7A119F5B52800F7DA5B /* NetworkController.swift in Sources */,
-				5288AB3019F8455C006FC7B3 /* UserViewController.swift in Sources */,
+				5288AB3019F8455C006FC7B3 /* UserSearchViewController.swift in Sources */,
 				5288148819F56BE0005A362D /* RepoViewController.swift in Sources */,
 				520BE73119F5C7CB00331BFA /* Repo.swift in Sources */,
 				5265589519F9A9EB007736A6 /* RootViewController.swift in Sources */,

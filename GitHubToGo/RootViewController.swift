@@ -20,7 +20,7 @@ class RootViewController: UITableViewController, UINavigationControllerDelegate 
         
         // This is called whenever during all navigation operations
         // Only return a custom animator for two view controller types
-        if let rootViewController = fromVC as? UserViewController {
+        if let rootViewController = fromVC as? UserSearchViewController {
             if let detailViewControl = toVC as? UserDetailViewController {
                 let animator = ShowImageAnimator()
                 animator.origin = rootViewController.origin

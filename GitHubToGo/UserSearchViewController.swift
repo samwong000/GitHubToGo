@@ -1,5 +1,5 @@
 //
-//  UserViewController.swift
+//  UserSearchViewController.swift
 //  GitHubToGo
 //
 //  Created by Sam Wong on 22/10/2014.
@@ -8,7 +8,7 @@
 
 import UIKit
 
-class UserViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UISearchBarDelegate {
+class UserSearchViewController : UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UISearchBarDelegate {
 
     @IBOutlet weak var collectionView: UICollectionView!
     

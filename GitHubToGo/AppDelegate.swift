@@ -54,7 +54,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate, UINavigationControllerDel
         // This is called whenever during all navigation operations
         
         // Only return a custom animator for two view controller types
-        if let mainViewController = fromVC as? UserViewController {
+        if let mainViewController = fromVC as? UserSearchViewController {
             let animator = ShowImageAnimator()
             animator.origin = mainViewController.origin
             

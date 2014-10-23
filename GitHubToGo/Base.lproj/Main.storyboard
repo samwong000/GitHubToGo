@@ -277,10 +277,10 @@
             </objects>
             <point key="canvasLocation" x="-3875" y="-3403"/>
         </scene>
-        <!--User View Controller-->
+        <!--User Search View Controller-->
         <scene sceneID="Zrs-je-75F">
             <objects>
-                <viewController id="RLh-jp-dmd" customClass="UserViewController" customModule="GitHubToGo" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="RLh-jp-dmd" customClass="UserSearchViewController" customModule="GitHubToGo" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="iGG-Pj-Mem"/>
                         <viewControllerLayoutGuide type="bottom" id="ZdO-F5-UJX"/>

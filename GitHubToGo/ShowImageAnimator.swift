@@ -20,7 +20,7 @@ class ShowImageAnimator: NSObject, UIViewControllerAnimatedTransitioning {
     
     func animateTransition(transitionContext: UIViewControllerContextTransitioning) {
         // Find references for the two views controllers we're moving between
-        let fromViewController = transitionContext.viewControllerForKey(UITransitionContextFromViewControllerKey) as UserViewController
+        let fromViewController = transitionContext.viewControllerForKey(UITransitionContextFromViewControllerKey) as UserSearchViewController
         let toViewController = transitionContext.viewControllerForKey(UITransitionContextToViewControllerKey) as UserDetailViewController
         
         // Grab the container view from the context
