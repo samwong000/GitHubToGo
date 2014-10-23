@@ -24,6 +24,8 @@ class NetworkController {
     // get from https://developer.github.com/v3/oauth/
     let githubPostURL = "https://github.com/login/oauth/access_token"
     
+    let imageQueue = NSOperationQueue()
+    var imageCache = NSCache()
 
     class var controller : NetworkController {
     struct Static {
@@ -114,10 +116,8 @@ class NetworkController {
     
     func fetchRepoInfo(repo : Repo?, completionHandler : (errorDescription : String?, repo : [Repo]?) -> (Void) ) {
         //let url = NSURL(string: "http://localhost:3000")
-
-//        let url = NSURL(string: "https://api.github.com/search/repositories?q=tetris+language:assembly&sort=stars&order=desc")
-
-        let url = NSURL(string: "https://api.github.com/search/repositories?q=\(repo?.name)")
+        
+        let url = NSURL(string: "https://api.github.com/search/repositories")
         
         if authenticatedSession != nil {
             let dataTask = authenticatedSession!.dataTaskWithURL(url!, completionHandler: { (data, response, error) -> Void in
@@ -146,12 +146,12 @@ class NetworkController {
 
     }
     
-    func fetchRepoInfoWithSearchTerm(searchText : NSString, completionHandler : (errorDescription : String?, repo : [Repo]?) -> (Void) ) {
+    func fetchRepoInfoWithSearchTerm(searchText : String, completionHandler : (errorDescription : String?, repo : [Repo]?) -> (Void) ) {
         //let url = NSURL(string: "http://localhost:3000")
-//        let formattedSearchTerm = searchText.stringByReplacingOccurencesOfString(" ", withString: "+", options: NSStringCompareOptions.LiteralSearch, range: nil)
         //        let url = NSURL(string: "https://api.github.com/search/repositories?q=tetris+language:assembly&sort=stars&order=desc")
         
-        let url = NSURL(string: "https://api.github.com/search/repositories?q=\(searchText)")
+        let newString = searchText.stringByReplacingOccurrencesOfString(" ", withString: "+", options: NSStringCompareOptions.LiteralSearch, range: nil)
+        let url = NSURL(string: "https://api.github.com/search/repositories?q=\(newString)")
         
         if authenticatedSession != nil {
             let dataTask = authenticatedSession!.dataTaskWithURL(url!, completionHandler: { (data, response, error) -> Void in
@@ -159,10 +159,10 @@ class NetworkController {
                     switch httpResponse.statusCode {
                     case 200...204:
                         //successful
-                        let repoInfo = Repo.parseJSONDataIntoRepo(data)
+                        let dataInfo = Repo.parseJSONDataIntoRepo(data)
                         
                         NSOperationQueue.mainQueue().addOperationWithBlock({ () -> Void in
-                            completionHandler (errorDescription : nil, repo : repoInfo)
+                            completionHandler (errorDescription : nil, repo : dataInfo)
                         })
                         //                    for header in httpResponse.allHeaderFields {
                         //                        println(header)
@@ -176,9 +176,53 @@ class NetworkController {
             })
             dataTask.resume()
         }
-        
-        
     }
 
+    func fetchUsers(searchText : String, completionHandler : (errorDescription : String?, users : [User]?) -> (Void) ) {
+        
+        let newString = searchText.stringByReplacingOccurrencesOfString(" ", withString: "+", options: NSStringCompareOptions.LiteralSearch, range: nil)
+        let url = NSURL(string: "https://api.github.com/search/users?q=t\(newString)")
+        
+        if authenticatedSession != nil {
+            let dataTask = authenticatedSession!.dataTaskWithURL(url!, completionHandler: { (data, response, error) -> Void in
+                if let httpResponse = response as? NSHTTPURLResponse {
+                    switch httpResponse.statusCode {
+                    case 200...204:
+                        let dataInfo = User.parseJSONDataIntoUser(data)
+                        
+                        NSOperationQueue.mainQueue().addOperationWithBlock({ () -> Void in
+                            completionHandler (errorDescription : nil, users : dataInfo)
+                        })
+                    default:
+                        println("bad response? \(httpResponse.statusCode)")
+                    }
+                }
+            })
+            dataTask.resume()
+        }
+    }
+    
+    func downloadUserImage(user : User, completionHandler : (image : UIImage) -> (Void)) {
+        
+        self.imageQueue.addOperationWithBlock { () -> Void in
+            var image : UIImage?
+            var data : NSData? = self.imageCache.objectForKey(user.avatarURL) as? NSData
+            
+            if let tempData = data {
+                image = UIImage(data: tempData)
+            } else {
+                let url = NSURL(string: user.avatarURL)
+                let imageData = NSData(contentsOfURL: url!)
+                image = UIImage(data: imageData!)
+                self.imageCache.setObject(imageData!, forKey: user.avatarURL)
+            }
+            
+            user.avatarImage = image!
+            
+            NSOperationQueue.mainQueue().addOperationWithBlock({ () -> Void in
+                completionHandler(image: image!)
+            })
+        }
+    }
     
 }

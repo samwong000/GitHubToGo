@@ -70,5 +70,13 @@ class RepoViewController: UIViewController, UITableViewDataSource, UITableViewDe
         })
     }
     
+    func searchBar(searchBar: UISearchBar, shouldChangeTextInRange range: NSRange, replacementText text: String) -> Bool {
+        println("searchBar:shouldChangeTextInRange text = \(text)")
+        println(text.validate())
+        
+        return text.validate()
+        
+    }
+    
 }
 

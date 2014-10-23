@@ -1,0 +1,46 @@
+{
+    "total_count": 20713,
+    "incomplete_results": false,
+    "items": [
+              {
+              "login": "tom",
+              "id": 748,
+              "avatar_url": "https://avatars.githubusercontent.com/u/748?v=2",
+              "gravatar_id": "",
+              "url": "https://api.github.com/users/tom",
+              "html_url": "https://github.com/tom",
+              "followers_url": "https://api.github.com/users/tom/followers",
+              "following_url": "https://api.github.com/users/tom/following{/other_user}",
+              "gists_url": "https://api.github.com/users/tom/gists{/gist_id}",
+              "starred_url": "https://api.github.com/users/tom/starred{/owner}{/repo}",
+              "subscriptions_url": "https://api.github.com/users/tom/subscriptions",
+              "organizations_url": "https://api.github.com/users/tom/orgs",
+              "repos_url": "https://api.github.com/users/tom/repos",
+              "events_url": "https://api.github.com/users/tom/events{/privacy}",
+              "received_events_url": "https://api.github.com/users/tom/received_events",
+              "type": "User",
+              "site_admin": false,
+              "score": 55.17348
+              },
+              {
+              "login": "tmilewski",
+              "id": 26691,
+              "avatar_url": "https://avatars.githubusercontent.com/u/26691?v=2",
+              "gravatar_id": "",
+              "url": "https://api.github.com/users/tmilewski",
+              "html_url": "https://github.com/tmilewski",
+              "followers_url": "https://api.github.com/users/tmilewski/followers",
+              "following_url": "https://api.github.com/users/tmilewski/following{/other_user}",
+              "gists_url": "https://api.github.com/users/tmilewski/gists{/gist_id}",
+              "starred_url": "https://api.github.com/users/tmilewski/starred{/owner}{/repo}",
+              "subscriptions_url": "https://api.github.com/users/tmilewski/subscriptions",
+              "organizations_url": "https://api.github.com/users/tmilewski/orgs",
+              "repos_url": "https://api.github.com/users/tmilewski/repos",
+              "events_url": "https://api.github.com/users/tmilewski/events{/privacy}",
+              "received_events_url": "https://api.github.com/users/tmilewski/received_events",
+              "type": "User",
+              "site_admin": false,
+              "score": 19.399044
+              }
+              ]
+}

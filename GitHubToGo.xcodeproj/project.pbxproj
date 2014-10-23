@@ -7,10 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		5201C91F19F6D1410021DE8B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5201C91E19F6D1410021DE8B /* ViewController.swift */; };
 		520BE73119F5C7CB00331BFA /* Repo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 520BE73019F5C7CB00331BFA /* Repo.swift */; };
 		5222A7A119F5B52800F7DA5B /* NetworkController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5222A7A019F5B52800F7DA5B /* NetworkController.swift */; };
 		5222A7A919F5B88D00F7DA5B /* Repo.JSON in Resources */ = {isa = PBXBuildFile; fileRef = 5222A7A719F5B88D00F7DA5B /* Repo.JSON */; };
+		5265588E19F95F40007736A6 /* ImageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5265588D19F95F40007736A6 /* ImageCell.swift */; };
+		5265589119F964C7007736A6 /* ShowImageAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5265589019F964C7007736A6 /* ShowImageAnimator.swift */; };
+		5265589319F964CF007736A6 /* HideImageAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5265589219F964CF007736A6 /* HideImageAnimator.swift */; };
+		5265589519F9A9EB007736A6 /* RootViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5265589419F9A9EB007736A6 /* RootViewController.swift */; };
 		5288148619F56BE0005A362D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5288148519F56BE0005A362D /* AppDelegate.swift */; };
 		5288148819F56BE0005A362D /* RepoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5288148719F56BE0005A362D /* RepoViewController.swift */; };
 		5288148B19F56BE0005A362D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5288148919F56BE0005A362D /* Main.storyboard */; };
@@ -18,6 +21,13 @@
 		5288149019F56BE0005A362D /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5288148E19F56BE0005A362D /* LaunchScreen.xib */; };
 		5288149C19F56BE0005A362D /* GitHubToGoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5288149B19F56BE0005A362D /* GitHubToGoTests.swift */; };
 		528814A619F57046005A362D /* SplitContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 528814A519F57046005A362D /* SplitContainerViewController.swift */; };
+		5288AB3019F8455C006FC7B3 /* UserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5288AB2F19F8455C006FC7B3 /* UserViewController.swift */; };
+		5288AB6319F84AEB006FC7B3 /* UserCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5288AB6219F84AEB006FC7B3 /* UserCell.swift */; };
+		528B72A819F9B0A4008F8031 /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 528B72A719F9B0A4008F8031 /* Extension.swift */; };
+		52AA7C9C19F89DFF00B03847 /* UserDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52AA7C9B19F89DFF00B03847 /* UserDetailViewController.swift */; };
+		52FF8C1A19F850A900060B50 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52FF8C1919F850A900060B50 /* User.swift */; };
+		52FF8C1C19F850DF00060B50 /* User.JSON in Resources */ = {isa = PBXBuildFile; fileRef = 52FF8C1B19F850DF00060B50 /* User.JSON */; };
+		52FF8C1E19F85D6A00060B50 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52FF8C1D19F85D6A00060B50 /* ViewController.swift */; };
 		52FF9F2219F5DC5F00323BA7 /* RepoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52FF9F2119F5DC5F00323BA7 /* RepoCell.swift */; };
 /* End PBXBuildFile section */
 
@@ -32,10 +42,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		5201C91E19F6D1410021DE8B /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		520BE73019F5C7CB00331BFA /* Repo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Repo.swift; path = ../Repo.swift; sourceTree = "<group>"; };
 		5222A7A019F5B52800F7DA5B /* NetworkController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkController.swift; sourceTree = "<group>"; };
 		5222A7A719F5B88D00F7DA5B /* Repo.JSON */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Repo.JSON; sourceTree = "<group>"; };
+		5265588D19F95F40007736A6 /* ImageCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageCell.swift; sourceTree = "<group>"; };
+		5265589019F964C7007736A6 /* ShowImageAnimator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShowImageAnimator.swift; sourceTree = "<group>"; };
+		5265589219F964CF007736A6 /* HideImageAnimator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HideImageAnimator.swift; sourceTree = "<group>"; };
+		5265589419F9A9EB007736A6 /* RootViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RootViewController.swift; sourceTree = "<group>"; };
 		5288148019F56BE0005A362D /* GitHubToGo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GitHubToGo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5288148419F56BE0005A362D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5288148519F56BE0005A362D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -47,6 +60,13 @@
 		5288149A19F56BE0005A362D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5288149B19F56BE0005A362D /* GitHubToGoTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GitHubToGoTests.swift; sourceTree = "<group>"; };
 		528814A519F57046005A362D /* SplitContainerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SplitContainerViewController.swift; sourceTree = "<group>"; };
+		5288AB2F19F8455C006FC7B3 /* UserViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserViewController.swift; sourceTree = "<group>"; };
+		5288AB6219F84AEB006FC7B3 /* UserCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserCell.swift; sourceTree = "<group>"; };
+		528B72A719F9B0A4008F8031 /* Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
+		52AA7C9B19F89DFF00B03847 /* UserDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserDetailViewController.swift; sourceTree = "<group>"; };
+		52FF8C1919F850A900060B50 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		52FF8C1B19F850DF00060B50 /* User.JSON */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = User.JSON; sourceTree = "<group>"; };
+		52FF8C1D19F85D6A00060B50 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		52FF9F2119F5DC5F00323BA7 /* RepoCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RepoCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -71,10 +91,13 @@
 		5222A7A219F5B52F00F7DA5B /* Controller Layer */ = {
 			isa = PBXGroup;
 			children = (
-				5201C91E19F6D1410021DE8B /* ViewController.swift */,
 				528814A519F57046005A362D /* SplitContainerViewController.swift */,
 				5288148719F56BE0005A362D /* RepoViewController.swift */,
 				5222A7A019F5B52800F7DA5B /* NetworkController.swift */,
+				5288AB2F19F8455C006FC7B3 /* UserViewController.swift */,
+				52FF8C1D19F85D6A00060B50 /* ViewController.swift */,
+				52AA7C9B19F89DFF00B03847 /* UserDetailViewController.swift */,
+				5265589419F9A9EB007736A6 /* RootViewController.swift */,
 			);
 			name = "Controller Layer";
 			sourceTree = "<group>";
@@ -82,8 +105,12 @@
 		5222A7A319F5B53A00F7DA5B /* Model Layer */ = {
 			isa = PBXGroup;
 			children = (
+				52FF9F2119F5DC5F00323BA7 /* RepoCell.swift */,
+				5288AB6219F84AEB006FC7B3 /* UserCell.swift */,
 				520BE73019F5C7CB00331BFA /* Repo.swift */,
+				52FF8C1919F850A900060B50 /* User.swift */,
 				5222A7A719F5B88D00F7DA5B /* Repo.JSON */,
+				52FF8C1B19F850DF00060B50 /* User.JSON */,
 			);
 			name = "Model Layer";
 			sourceTree = "<group>";
@@ -92,9 +119,18 @@
 			isa = PBXGroup;
 			children = (
 				5288148919F56BE0005A362D /* Main.storyboard */,
-				52FF9F2119F5DC5F00323BA7 /* RepoCell.swift */,
+				5265588D19F95F40007736A6 /* ImageCell.swift */,
 			);
 			name = "View Layer";
+			sourceTree = "<group>";
+		};
+		5265588F19F964B7007736A6 /* Animator */ = {
+			isa = PBXGroup;
+			children = (
+				5265589219F964CF007736A6 /* HideImageAnimator.swift */,
+				5265589019F964C7007736A6 /* ShowImageAnimator.swift */,
+			);
+			name = Animator;
 			sourceTree = "<group>";
 		};
 		5288147719F56BE0005A362D = {
@@ -118,6 +154,8 @@
 		5288148219F56BE0005A362D /* GitHubToGo */ = {
 			isa = PBXGroup;
 			children = (
+				528B72A719F9B0A4008F8031 /* Extension.swift */,
+				5265588F19F964B7007736A6 /* Animator */,
 				5222A7A419F5B54000F7DA5B /* View Layer */,
 				5222A7A319F5B53A00F7DA5B /* Model Layer */,
 				5222A7A219F5B52F00F7DA5B /* Controller Layer */,
@@ -235,6 +273,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				5222A7A919F5B88D00F7DA5B /* Repo.JSON in Resources */,
+				52FF8C1C19F850DF00060B50 /* User.JSON in Resources */,
 				5288148B19F56BE0005A362D /* Main.storyboard in Resources */,
 				5288149019F56BE0005A362D /* LaunchScreen.xib in Resources */,
 				5288148D19F56BE0005A362D /* Images.xcassets in Resources */,
@@ -255,13 +294,22 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				52FF8C1E19F85D6A00060B50 /* ViewController.swift in Sources */,
 				5222A7A119F5B52800F7DA5B /* NetworkController.swift in Sources */,
+				5288AB3019F8455C006FC7B3 /* UserViewController.swift in Sources */,
 				5288148819F56BE0005A362D /* RepoViewController.swift in Sources */,
 				520BE73119F5C7CB00331BFA /* Repo.swift in Sources */,
+				5265589519F9A9EB007736A6 /* RootViewController.swift in Sources */,
+				5265588E19F95F40007736A6 /* ImageCell.swift in Sources */,
+				528B72A819F9B0A4008F8031 /* Extension.swift in Sources */,
+				5265589319F964CF007736A6 /* HideImageAnimator.swift in Sources */,
 				52FF9F2219F5DC5F00323BA7 /* RepoCell.swift in Sources */,
-				5201C91F19F6D1410021DE8B /* ViewController.swift in Sources */,
+				5288AB6319F84AEB006FC7B3 /* UserCell.swift in Sources */,
+				5265589119F964C7007736A6 /* ShowImageAnimator.swift in Sources */,
 				5288148619F56BE0005A362D /* AppDelegate.swift in Sources */,
+				52FF8C1A19F850A900060B50 /* User.swift in Sources */,
 				528814A619F57046005A362D /* SplitContainerViewController.swift in Sources */,
+				52AA7C9C19F89DFF00B03847 /* UserDetailViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -386,7 +434,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = GitHubToGo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -396,7 +446,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = GitHubToGo/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
