@@ -15,6 +15,13 @@ class SplitContainerViewController: UIViewController, UISplitViewControllerDeleg
 
         let splitVC = self.childViewControllers[0] as UISplitViewController
         splitVC.delegate = self
+        
+        if NetworkController.controller.oAuthToken == nil {
+            //this improve the performance
+            dispatch_after(1, dispatch_get_main_queue(), {
+                NetworkController.controller.requestOAuthAccess()
+            })
+        }
     }
 
     override func didReceiveMemoryWarning() {

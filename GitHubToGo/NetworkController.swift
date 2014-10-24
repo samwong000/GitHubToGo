@@ -157,7 +157,7 @@ class NetworkController {
                 if let httpResponse = response as? NSHTTPURLResponse {
                     switch httpResponse.statusCode {
                     case 200...204:
-                        let dataInfo = User.parseJSONDataIntoUser(data)
+                        let dataInfo = User.parseJSONDataIntoUsers(data)
                         
                         NSOperationQueue.mainQueue().addOperationWithBlock({ () -> Void in
                             completionHandler (errorDescription : nil, users : dataInfo)
@@ -190,6 +190,53 @@ class NetworkController {
             NSOperationQueue.mainQueue().addOperationWithBlock({ () -> Void in
                 completionHandler(image: image!)
             })
+        }
+    }
+    
+    func fetchUserProfile(userName : String, completionHandler : (errorDescription : String?, user : User?) -> (Void) ) {
+        
+        let newString = userName.stringByReplacingOccurrencesOfString(" ", withString: "+", options: NSStringCompareOptions.LiteralSearch, range: nil)
+        let url = NSURL(string: "https://api.github.com/users/\(newString)")
+        
+        if authenticatedSession != nil {
+            let dataTask = authenticatedSession!.dataTaskWithURL(url!, completionHandler: { (data, response, error) -> Void in
+                if let httpResponse = response as? NSHTTPURLResponse {
+                    switch httpResponse.statusCode {
+                    case 200...204:
+                        let dataInfo = User.parseJSONDataIntoUser(data)
+                        
+                        NSOperationQueue.mainQueue().addOperationWithBlock({ () -> Void in
+                            completionHandler (errorDescription : nil, user : dataInfo)
+                        })
+                    default:
+                        println("bad response? \(httpResponse.statusCode)")
+                    }
+                }
+            })
+            dataTask.resume()
+        }
+    }
+    
+    func fetchAuthenticatedUserProfile(completionHandler : (errorDescription : String?, user : User?) -> (Void) ) {
+        
+        let url = NSURL(string: "https://api.github.com/user")
+        
+        if authenticatedSession != nil {
+            let dataTask = authenticatedSession!.dataTaskWithURL(url!, completionHandler: { (data, response, error) -> Void in
+                if let httpResponse = response as? NSHTTPURLResponse {
+                    switch httpResponse.statusCode {
+                    case 200...204:
+                        let dataInfo = User.parseJSONDataIntoUser(data)
+                        
+                        NSOperationQueue.mainQueue().addOperationWithBlock({ () -> Void in
+                            completionHandler (errorDescription : nil, user : dataInfo)
+                        })
+                    default:
+                        println("bad response? \(httpResponse.statusCode)")
+                    }
+                }
+            })
+            dataTask.resume()
         }
     }
     

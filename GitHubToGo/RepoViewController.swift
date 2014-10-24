@@ -69,9 +69,36 @@ class RepoViewController: UIViewController, UITableViewDataSource, UITableViewDe
     }
     
     func searchBar(searchBar: UISearchBar, shouldChangeTextInRange range: NSRange, replacementText text: String) -> Bool {
-        println("searchBar:shouldChangeTextInRange text = \(text)")
-        println(text.validate())
+        //display warning if user types in invalid letter
         
+        let frame = self.view.frame
+        
+        println(frame)
+        var warningRect = CGRect(x: frame.width / 2 , y: frame.height / 2, width: 200, height: 40)
+        var warningLabel = UILabel()
+        
+        warningLabel.frame = warningRect
+        warningLabel.backgroundColor = UIColor.grayColor()
+        warningLabel.textColor = UIColor.whiteColor()
+        warningLabel.textAlignment = NSTextAlignment.Center
+        warningLabel.layer.cornerRadius = 8
+        warningLabel.clipsToBounds = true
+        warningLabel.alpha = 0
+        warningLabel.text = "Invalid character '\(text)'"
+        
+        
+        if text.validate() == false {
+            view.addSubview(warningLabel)
+            UIView.animateWithDuration(0.8, delay: 0.0, options: nil, animations: { () -> Void in
+                warningLabel.alpha = 1.0
+                }, completion: { (finished) -> Void in
+                    UIView.animateWithDuration(0.8, delay: 2.0, options: nil, animations: { () -> Void in
+                        warningLabel.alpha = 0.0
+                        }, completion: { (finished) -> Void in
+                            //
+                    })
+            })
+        }
         return text.validate()
         
     }

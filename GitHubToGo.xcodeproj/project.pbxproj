@@ -10,6 +10,7 @@
 		520BE73119F5C7CB00331BFA /* Repo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 520BE73019F5C7CB00331BFA /* Repo.swift */; };
 		5222A7A119F5B52800F7DA5B /* NetworkController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5222A7A019F5B52800F7DA5B /* NetworkController.swift */; };
 		5222A7A919F5B88D00F7DA5B /* Repo.JSON in Resources */ = {isa = PBXBuildFile; fileRef = 5222A7A719F5B88D00F7DA5B /* Repo.JSON */; };
+		5224628F19FAF1B900BC8D1B /* AuthenticatedUser.JSON in Resources */ = {isa = PBXBuildFile; fileRef = 5224628E19FAF1B900BC8D1B /* AuthenticatedUser.JSON */; };
 		523BCC4419F9C68300CB8237 /* RepoDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 523BCC4319F9C68300CB8237 /* RepoDetailViewController.swift */; };
 		5265588E19F95F40007736A6 /* ImageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5265588D19F95F40007736A6 /* ImageCell.swift */; };
 		5265589119F964C7007736A6 /* ShowImageAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5265589019F964C7007736A6 /* ShowImageAnimator.swift */; };
@@ -26,6 +27,8 @@
 		5288AB6319F84AEB006FC7B3 /* UserCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5288AB6219F84AEB006FC7B3 /* UserCell.swift */; };
 		528B72A819F9B0A4008F8031 /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 528B72A719F9B0A4008F8031 /* Extension.swift */; };
 		52AA7C9C19F89DFF00B03847 /* UserDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52AA7C9B19F89DFF00B03847 /* UserDetailViewController.swift */; };
+		52C18F9719FADB5D00DC639F /* MyProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52C18F9619FADB5D00DC639F /* MyProfileViewController.swift */; };
+		52C18F9919FAE74600DC639F /* Profile.JSON in Resources */ = {isa = PBXBuildFile; fileRef = 52C18F9819FAE74600DC639F /* Profile.JSON */; };
 		52FF8C1A19F850A900060B50 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52FF8C1919F850A900060B50 /* User.swift */; };
 		52FF8C1C19F850DF00060B50 /* User.JSON in Resources */ = {isa = PBXBuildFile; fileRef = 52FF8C1B19F850DF00060B50 /* User.JSON */; };
 		52FF8C1E19F85D6A00060B50 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52FF8C1D19F85D6A00060B50 /* ViewController.swift */; };
@@ -46,6 +49,7 @@
 		520BE73019F5C7CB00331BFA /* Repo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Repo.swift; path = ../Repo.swift; sourceTree = "<group>"; };
 		5222A7A019F5B52800F7DA5B /* NetworkController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkController.swift; sourceTree = "<group>"; };
 		5222A7A719F5B88D00F7DA5B /* Repo.JSON */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Repo.JSON; sourceTree = "<group>"; };
+		5224628E19FAF1B900BC8D1B /* AuthenticatedUser.JSON */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = AuthenticatedUser.JSON; sourceTree = "<group>"; };
 		523BCC4319F9C68300CB8237 /* RepoDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RepoDetailViewController.swift; sourceTree = "<group>"; };
 		5265588D19F95F40007736A6 /* ImageCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageCell.swift; sourceTree = "<group>"; };
 		5265589019F964C7007736A6 /* ShowImageAnimator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShowImageAnimator.swift; sourceTree = "<group>"; };
@@ -66,6 +70,8 @@
 		5288AB6219F84AEB006FC7B3 /* UserCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserCell.swift; sourceTree = "<group>"; };
 		528B72A719F9B0A4008F8031 /* Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
 		52AA7C9B19F89DFF00B03847 /* UserDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserDetailViewController.swift; sourceTree = "<group>"; };
+		52C18F9619FADB5D00DC639F /* MyProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MyProfileViewController.swift; sourceTree = "<group>"; };
+		52C18F9819FAE74600DC639F /* Profile.JSON */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Profile.JSON; sourceTree = "<group>"; };
 		52FF8C1919F850A900060B50 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		52FF8C1B19F850DF00060B50 /* User.JSON */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = User.JSON; sourceTree = "<group>"; };
 		52FF8C1D19F85D6A00060B50 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -94,9 +100,10 @@
 			isa = PBXGroup;
 			children = (
 				528B72A719F9B0A4008F8031 /* Extension.swift */,
+				52C18F9619FADB5D00DC639F /* MyProfileViewController.swift */,
+				5222A7A019F5B52800F7DA5B /* NetworkController.swift */,
 				528814A519F57046005A362D /* SplitContainerViewController.swift */,
 				5288148719F56BE0005A362D /* RepoViewController.swift */,
-				5222A7A019F5B52800F7DA5B /* NetworkController.swift */,
 				5288AB2F19F8455C006FC7B3 /* UserSearchViewController.swift */,
 				52FF8C1D19F85D6A00060B50 /* ViewController.swift */,
 				52AA7C9B19F89DFF00B03847 /* UserDetailViewController.swift */,
@@ -115,6 +122,8 @@
 				52FF8C1919F850A900060B50 /* User.swift */,
 				5222A7A719F5B88D00F7DA5B /* Repo.JSON */,
 				52FF8C1B19F850DF00060B50 /* User.JSON */,
+				52C18F9819FAE74600DC639F /* Profile.JSON */,
+				5224628E19FAF1B900BC8D1B /* AuthenticatedUser.JSON */,
 			);
 			name = "Model Layer";
 			sourceTree = "<group>";
@@ -158,10 +167,10 @@
 		5288148219F56BE0005A362D /* GitHubToGo */ = {
 			isa = PBXGroup;
 			children = (
+				5222A7A219F5B52F00F7DA5B /* Controller Layer */,
 				5265588F19F964B7007736A6 /* Animator */,
 				5222A7A419F5B54000F7DA5B /* View Layer */,
 				5222A7A319F5B53A00F7DA5B /* Model Layer */,
-				5222A7A219F5B52F00F7DA5B /* Controller Layer */,
 				5288148519F56BE0005A362D /* AppDelegate.swift */,
 				5288148C19F56BE0005A362D /* Images.xcassets */,
 				5288148E19F56BE0005A362D /* LaunchScreen.xib */,
@@ -279,7 +288,9 @@
 				52FF8C1C19F850DF00060B50 /* User.JSON in Resources */,
 				5288148B19F56BE0005A362D /* Main.storyboard in Resources */,
 				5288149019F56BE0005A362D /* LaunchScreen.xib in Resources */,
+				5224628F19FAF1B900BC8D1B /* AuthenticatedUser.JSON in Resources */,
 				5288148D19F56BE0005A362D /* Images.xcassets in Resources */,
+				52C18F9919FAE74600DC639F /* Profile.JSON in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -309,6 +320,7 @@
 				52FF9F2219F5DC5F00323BA7 /* RepoCell.swift in Sources */,
 				5288AB6319F84AEB006FC7B3 /* UserCell.swift in Sources */,
 				5265589119F964C7007736A6 /* ShowImageAnimator.swift in Sources */,
+				52C18F9719FADB5D00DC639F /* MyProfileViewController.swift in Sources */,
 				523BCC4419F9C68300CB8237 /* RepoDetailViewController.swift in Sources */,
 				5288148619F56BE0005A362D /* AppDelegate.swift in Sources */,
 				52FF8C1A19F850A900060B50 /* User.swift in Sources */,
