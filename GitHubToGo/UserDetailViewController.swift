@@ -20,8 +20,6 @@ class UserDetailViewController: UIViewController {
         
         self.title = "Single Image"
         self.imageView.image = image
-        
-        
     }
 
     

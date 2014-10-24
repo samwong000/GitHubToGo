@@ -25,16 +25,6 @@ class RepoViewController: UIViewController, UITableViewDataSource, UITableViewDe
             })
         }
         
-        NetworkController.controller.fetchRepoInfo(nil, completionHandler: { (errorDescription, repo) -> (Void) in
-            if errorDescription != nil {
-                //alert user the error
-            } else {
-                self.repo = repo!
-                //this is an async process, must reload the tableview
-                self.tableView.reloadData()
-            }
-        })
-        
         self.searchBar.delegate = self
         self.tableView.dataSource = self
         self.tableView.delegate = self
@@ -51,6 +41,14 @@ class RepoViewController: UIViewController, UITableViewDataSource, UITableViewDe
         return cell
     }
     
+    func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+        let destinationVC = self.storyboard?.instantiateViewControllerWithIdentifier("RepoDetailVC") as RepoDetailViewController
+        let repo = self.repo[indexPath.row]
+        destinationVC.repo = repo
+        
+        self.navigationController?.pushViewController(destinationVC, animated: true)
+    }
+    
     func searchBarSearchButtonClicked(searchBar: UISearchBar) {
         let searchText = searchBar.text
         
@@ -59,12 +57,12 @@ class RepoViewController: UIViewController, UITableViewDataSource, UITableViewDe
         
         println("Search Text is \(searchText)")
         
-        NetworkController.controller.fetchRepoInfoWithSearchTerm(searchText, completionHandler: { (errorDescription, repo) -> (Void) in
+        NetworkController.controller.fetchRepos(searchText, completionHandler: { (errorDescription, repo) -> (Void) in
             if errorDescription != nil {
-                println("Error! searchBarSearchButtonClicked:fetchRepoInfoWithSearchTerm \(errorDescription) ")
+                println("Error! searchBarSearchButtonClicked:fetchRepos \(errorDescription) ")
             } else {
                 self.repo = repo!
-                //this is an async process, must reload the tableview
+                //this is an async process so must reload the tableview
                 self.tableView.reloadData()
             }
         })

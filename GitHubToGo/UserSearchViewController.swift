@@ -43,12 +43,6 @@ class UserSearchViewController : UIViewController, UICollectionViewDelegate, UIC
     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCellWithReuseIdentifier("USER_CELL", forIndexPath: indexPath) as UserCell
 
-
-//        
-//        var currentTag = cell.tag + 1
-//        cell.tag = currentTag
-//        
-//        let user = self.users[indexPath.row]
 //        
 //        if user.avatarImage != nil {
 //            let cellForImage = self.collectionView.cellForItemAtIndexPath(indexPath) as UserCell?
@@ -57,10 +51,11 @@ class UserSearchViewController : UIViewController, UICollectionViewDelegate, UIC
 //                cellForImage?.userName.text = user.login
 //            }
 //        } else {
-//            NetworkController.controller.downloadUserImage(user, completionHandler: { (image) -> (Void) in
+//         NetworkController.controller.fetchImage(user.avatarURL, completionHandler: { (image) -> (Void) in
 //                let cellForImage = self.collectionView.cellForItemAtIndexPath(indexPath) as UserCell?
 //                
 //                if cell.tag == currentTag {
+//                    user.avatarImage = image
 //                    cellForImage?.imageView.image = image
 //                }
 //                
@@ -71,15 +66,14 @@ class UserSearchViewController : UIViewController, UICollectionViewDelegate, UIC
         cell.tag = currentTag
         let user = self.users[indexPath.row]
         
-        NetworkController.controller.downloadUserImage(user, completionHandler: { (image) -> (Void) in
+        NetworkController.controller.fetchImage(user.avatarURL, completionHandler: { (image) -> (Void) in
             let cellForImage = self.collectionView.cellForItemAtIndexPath(indexPath) as UserCell?
             
             if cell.tag == currentTag {
+                user.avatarImage = image
                 cellForImage?.imageView.image = image
             }
-            
         })
-
         
         return cell
     }

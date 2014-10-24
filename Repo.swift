@@ -10,16 +10,16 @@ import UIKit
 
 class Repo {
     
-//    var totalCount : Int
-    
     var id : Int
     var name : String
     var fullName : String
+    var htmlURL : String
 
-    init(id : Int, name : String, fullName : String) {
+    init(id : Int, name : String, fullName : String, htmlURL : String) {
         self.id = id
         self.name = name
         self.fullName = fullName
+        self.htmlURL = htmlURL
     }
     
     class func parseJSONDataIntoRepo(rawJSONData : NSData) -> [Repo]? {
@@ -39,8 +39,9 @@ class Repo {
                         let fullName = item ["full_name"] as String
                         let id = item ["id"] as Int
                         let name = item ["name"] as String
+                        let htmlURL = item["html_url"] as String
                         
-                        var newRepo = Repo(id: id, name: name, fullName: fullName)
+                        var newRepo = Repo(id: id, name: name, fullName: fullName, htmlURL: htmlURL)
                         repos.append(newRepo)
                     }
                 }

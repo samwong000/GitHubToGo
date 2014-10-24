@@ -114,39 +114,8 @@ class NetworkController {
         }).resume() //must quote resume() to make it work
     }
     
-    func fetchRepoInfo(repo : Repo?, completionHandler : (errorDescription : String?, repo : [Repo]?) -> (Void) ) {
-        //let url = NSURL(string: "http://localhost:3000")
-        
-        let url = NSURL(string: "https://api.github.com/search/repositories")
-        
-        if authenticatedSession != nil {
-            let dataTask = authenticatedSession!.dataTaskWithURL(url!, completionHandler: { (data, response, error) -> Void in
-                if let httpResponse = response as? NSHTTPURLResponse {
-                    switch httpResponse.statusCode {
-                    case 200...204:
-                        //successful
-                        let repoInfo = Repo.parseJSONDataIntoRepo(data)
-                        
-                        NSOperationQueue.mainQueue().addOperationWithBlock({ () -> Void in
-                            completionHandler (errorDescription : nil, repo : repoInfo)
-                        })
-                        //                    for header in httpResponse.allHeaderFields {
-                        //                        println(header)
-                        //                    }
-                        //                    let responseString = NSString(data: data, encoding: NSUTF8StringEncoding)
-                        //                    println("responseString: \(responseString)")
-                    default:
-                        println("bad response? \(httpResponse.statusCode)")
-                    }
-                }
-            })
-            dataTask.resume()
-        }
-        
-
-    }
     
-    func fetchRepoInfoWithSearchTerm(searchText : String, completionHandler : (errorDescription : String?, repo : [Repo]?) -> (Void) ) {
+    func fetchRepos(searchText : String, completionHandler : (errorDescription : String?, repo : [Repo]?) -> (Void) ) {
         //let url = NSURL(string: "http://localhost:3000")
         //        let url = NSURL(string: "https://api.github.com/search/repositories?q=tetris+language:assembly&sort=stars&order=desc")
         
@@ -202,22 +171,21 @@ class NetworkController {
         }
     }
     
-    func downloadUserImage(user : User, completionHandler : (image : UIImage) -> (Void)) {
+    
+    func fetchImage(url : String, completionHandler : (image : UIImage) -> (Void)) {
         
         self.imageQueue.addOperationWithBlock { () -> Void in
             var image : UIImage?
-            var data : NSData? = self.imageCache.objectForKey(user.avatarURL) as? NSData
+            var data : NSData? = self.imageCache.objectForKey(url) as? NSData
             
             if let tempData = data {
                 image = UIImage(data: tempData)
             } else {
-                let url = NSURL(string: user.avatarURL)
-                let imageData = NSData(contentsOfURL: url!)
+                let imageUrl = NSURL(string: url)
+                let imageData = NSData(contentsOfURL: imageUrl!)
                 image = UIImage(data: imageData!)
-                self.imageCache.setObject(imageData!, forKey: user.avatarURL)
+                self.imageCache.setObject(imageData!, forKey: imageUrl!)
             }
-            
-            user.avatarImage = image!
             
             NSOperationQueue.mainQueue().addOperationWithBlock({ () -> Void in
                 completionHandler(image: image!)

@@ -24,6 +24,24 @@
             </objects>
             <point key="canvasLocation" x="-3055" y="-3072"/>
         </scene>
+        <!--Repo Detail View Controller-->
+        <scene sceneID="D9v-ym-d6t">
+            <objects>
+                <viewController storyboardIdentifier="RepoDetailVC" id="2gC-w1-liI" customClass="RepoDetailViewController" customModule="GitHubToGo" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="RIz-wK-XVR"/>
+                        <viewControllerLayoutGuide type="bottom" id="Emc-Se-aVs"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="TFA-8N-pVI">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="0sK-Bm-Avz" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2235" y="-4448"/>
+        </scene>
         <!--Root View Controller-->
         <scene sceneID="p1b-pm-wda">
             <objects>
@@ -214,7 +232,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rzx-S4-wEb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1151" y="-3043"/>
+            <point key="canvasLocation" x="-1531" y="-2985"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="IP0-0q-VZi">

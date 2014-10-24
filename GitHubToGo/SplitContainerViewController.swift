@@ -25,18 +25,10 @@ class SplitContainerViewController: UIViewController, UISplitViewControllerDeleg
     func splitViewController(splitViewController: UISplitViewController, collapseSecondaryViewController secondaryViewController: UIViewController!, ontoPrimaryViewController primaryViewController: UIViewController!) -> Bool {
         //get called again everytime the screen is rotated.
         //should add some codes to show true if it is the first launch
-        println("splitViewController")
+        //println("splitViewController")
         return true
     }
 
-    /*
-    // MARK: - Navigation
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepareForSegue(segue: UIStoryboardSegue!, sender: AnyObject!) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }

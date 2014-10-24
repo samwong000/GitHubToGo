@@ -10,6 +10,7 @@
 		520BE73119F5C7CB00331BFA /* Repo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 520BE73019F5C7CB00331BFA /* Repo.swift */; };
 		5222A7A119F5B52800F7DA5B /* NetworkController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5222A7A019F5B52800F7DA5B /* NetworkController.swift */; };
 		5222A7A919F5B88D00F7DA5B /* Repo.JSON in Resources */ = {isa = PBXBuildFile; fileRef = 5222A7A719F5B88D00F7DA5B /* Repo.JSON */; };
+		523BCC4419F9C68300CB8237 /* RepoDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 523BCC4319F9C68300CB8237 /* RepoDetailViewController.swift */; };
 		5265588E19F95F40007736A6 /* ImageCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5265588D19F95F40007736A6 /* ImageCell.swift */; };
 		5265589119F964C7007736A6 /* ShowImageAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5265589019F964C7007736A6 /* ShowImageAnimator.swift */; };
 		5265589319F964CF007736A6 /* HideImageAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5265589219F964CF007736A6 /* HideImageAnimator.swift */; };
@@ -45,6 +46,7 @@
 		520BE73019F5C7CB00331BFA /* Repo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Repo.swift; path = ../Repo.swift; sourceTree = "<group>"; };
 		5222A7A019F5B52800F7DA5B /* NetworkController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkController.swift; sourceTree = "<group>"; };
 		5222A7A719F5B88D00F7DA5B /* Repo.JSON */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Repo.JSON; sourceTree = "<group>"; };
+		523BCC4319F9C68300CB8237 /* RepoDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RepoDetailViewController.swift; sourceTree = "<group>"; };
 		5265588D19F95F40007736A6 /* ImageCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageCell.swift; sourceTree = "<group>"; };
 		5265589019F964C7007736A6 /* ShowImageAnimator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShowImageAnimator.swift; sourceTree = "<group>"; };
 		5265589219F964CF007736A6 /* HideImageAnimator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HideImageAnimator.swift; sourceTree = "<group>"; };
@@ -91,6 +93,7 @@
 		5222A7A219F5B52F00F7DA5B /* Controller Layer */ = {
 			isa = PBXGroup;
 			children = (
+				528B72A719F9B0A4008F8031 /* Extension.swift */,
 				528814A519F57046005A362D /* SplitContainerViewController.swift */,
 				5288148719F56BE0005A362D /* RepoViewController.swift */,
 				5222A7A019F5B52800F7DA5B /* NetworkController.swift */,
@@ -98,6 +101,7 @@
 				52FF8C1D19F85D6A00060B50 /* ViewController.swift */,
 				52AA7C9B19F89DFF00B03847 /* UserDetailViewController.swift */,
 				5265589419F9A9EB007736A6 /* RootViewController.swift */,
+				523BCC4319F9C68300CB8237 /* RepoDetailViewController.swift */,
 			);
 			name = "Controller Layer";
 			sourceTree = "<group>";
@@ -154,7 +158,6 @@
 		5288148219F56BE0005A362D /* GitHubToGo */ = {
 			isa = PBXGroup;
 			children = (
-				528B72A719F9B0A4008F8031 /* Extension.swift */,
 				5265588F19F964B7007736A6 /* Animator */,
 				5222A7A419F5B54000F7DA5B /* View Layer */,
 				5222A7A319F5B53A00F7DA5B /* Model Layer */,
@@ -306,6 +309,7 @@
 				52FF9F2219F5DC5F00323BA7 /* RepoCell.swift in Sources */,
 				5288AB6319F84AEB006FC7B3 /* UserCell.swift in Sources */,
 				5265589119F964C7007736A6 /* ShowImageAnimator.swift in Sources */,
+				523BCC4419F9C68300CB8237 /* RepoDetailViewController.swift in Sources */,
 				5288148619F56BE0005A362D /* AppDelegate.swift in Sources */,
 				52FF8C1A19F850A900060B50 /* User.swift in Sources */,
 				528814A619F57046005A362D /* SplitContainerViewController.swift in Sources */,
@@ -436,7 +440,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = GitHubToGo/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -448,7 +452,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = GitHubToGo/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 7.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
