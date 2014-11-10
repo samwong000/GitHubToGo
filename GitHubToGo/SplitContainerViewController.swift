@@ -30,9 +30,10 @@ class SplitContainerViewController: UIViewController, UISplitViewControllerDeleg
     }
     
     func splitViewController(splitViewController: UISplitViewController, collapseSecondaryViewController secondaryViewController: UIViewController!, ontoPrimaryViewController primaryViewController: UIViewController!) -> Bool {
-        //get called again everytime the screen is rotated.
-        //should add some codes to show true if it is the first launch
-        //println("splitViewController")
+        
+        // true - show menu screen
+        // false - show detail
+        
         return true
     }
 

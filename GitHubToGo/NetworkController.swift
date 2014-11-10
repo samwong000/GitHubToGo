@@ -147,10 +147,12 @@ class NetworkController {
         }
     }
 
+    
     func fetchUsers(searchText : String, completionHandler : (errorDescription : String?, users : [User]?) -> (Void) ) {
         
         let newString = searchText.stringByReplacingOccurrencesOfString(" ", withString: "+", options: NSStringCompareOptions.LiteralSearch, range: nil)
-        let url = NSURL(string: "https://api.github.com/search/users?q=t\(newString)")
+        let url = NSURL(string: "https://api.github.com/search/users?q=\(newString)")
+        //let url = NSURL(string: "https://api.github.com/search/users/\(newString)")
         
         if authenticatedSession != nil {
             let dataTask = authenticatedSession!.dataTaskWithURL(url!, completionHandler: { (data, response, error) -> Void in
@@ -182,9 +184,10 @@ class NetworkController {
                 image = UIImage(data: tempData)
             } else {
                 let imageUrl = NSURL(string: url)
-                let imageData = NSData(contentsOfURL: imageUrl!)
-                image = UIImage(data: imageData!)
-                self.imageCache.setObject(imageData!, forKey: imageUrl!)
+                if let imageData = NSData(contentsOfURL: imageUrl!) {
+                    image = UIImage(data: imageData)
+                    self.imageCache.setObject(imageData, forKey: imageUrl!)
+                }
             }
             
             NSOperationQueue.mainQueue().addOperationWithBlock({ () -> Void in
@@ -217,6 +220,7 @@ class NetworkController {
         }
     }
     
+    
     func fetchAuthenticatedUserProfile(completionHandler : (errorDescription : String?, user : User?) -> (Void) ) {
         
         let url = NSURL(string: "https://api.github.com/user")
@@ -239,5 +243,30 @@ class NetworkController {
             dataTask.resume()
         }
     }
+    
+    
+    func fetchAuthenticatedUserRepos(completionHandler : (errorDescription : String?, repo : [Repo]?) -> (Void) ) {
+        
+        let url = NSURL(string: "https://api.github.com/user/repos")
+        
+        if authenticatedSession != nil {
+            let dataTask = authenticatedSession!.dataTaskWithURL(url!, completionHandler: { (data, response, error) -> Void in
+                if let httpResponse = response as? NSHTTPURLResponse {
+                    switch httpResponse.statusCode {
+                    case 200...204:
+                        let dataInfo = Repo.parseJSONDataIntoRepo(data)
+                        
+                        NSOperationQueue.mainQueue().addOperationWithBlock({ () -> Void in
+                            completionHandler (errorDescription : nil, repo : dataInfo)
+                        })
+                    default:
+                        println("bad response? \(httpResponse.statusCode)")
+                    }
+                }
+            })
+            dataTask.resume()
+        }
+    }
+    
     
 }

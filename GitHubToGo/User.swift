@@ -19,9 +19,10 @@ class User {
     var bio : String?
     var publicRepos : Int? = 0
     var privateRepos : Int? = 0
-
+    var name : String?
     
-    init(login : String, id : Int, avatarURL : String, URL : String, reposURL : String?, hireable : Bool?, bio : String?, publicRepos : Int?, privateRepos : Int?) {
+    
+    init(login : String, id : Int, avatarURL : String, URL : String, reposURL : String?, hireable : Bool?, bio : String?, publicRepos : Int?, privateRepos : Int?, name : String?) {
         self.login = login
         self.id = id
         self.avatarURL = avatarURL
@@ -31,6 +32,7 @@ class User {
         self.bio = bio?
         self.publicRepos = publicRepos
         self.privateRepos = privateRepos
+        self.name = name
     }
     
     class func parseJSONDataIntoUsers(rawJSONData : NSData) -> [User]? {
@@ -55,8 +57,9 @@ class User {
                         let publicRepos = item["public_repos"] as? Int
                         let bio = item["bio"] as? String
                         let privateRepos = item["private_repos"] as? Int
+                        let name = item["name"] as? String
                         
-                        var newUser = User(login: login, id: id, avatarURL: avatarURL, URL: URL, reposURL: reposURL, hireable: hireable, bio: bio, publicRepos: publicRepos, privateRepos: privateRepos)
+                        var newUser = User(login: login, id: id, avatarURL: avatarURL, URL: URL, reposURL: reposURL, hireable: hireable, bio: bio, publicRepos: publicRepos, privateRepos: privateRepos, name: name)
                         users.append(newUser)
                     }
                 }
@@ -84,8 +87,9 @@ class User {
             let publicRepos = item["public_repos"] as Int
             let bio = item["bio"] as? String
             let privateRepos = item["owned_private_repos"] as Int
+            let name = item["name"] as? String
             
-            var user = User(login: login, id: id, avatarURL: avatarURL, URL: URL, reposURL: reposURL, hireable: hireable, bio: bio, publicRepos: publicRepos, privateRepos: privateRepos)
+            var user = User(login: login, id: id, avatarURL: avatarURL, URL: URL, reposURL: reposURL, hireable: hireable, bio: bio, publicRepos: publicRepos, privateRepos: privateRepos, name: name)
             
             return user
 

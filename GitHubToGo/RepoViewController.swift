@@ -73,8 +73,7 @@ class RepoViewController: UIViewController, UITableViewDataSource, UITableViewDe
         
         let frame = self.view.frame
         
-        println(frame)
-        var warningRect = CGRect(x: frame.width / 2 , y: frame.height / 2, width: 200, height: 40)
+        var warningRect = CGRect(x: 37, y: 114, width: 300, height: 40)
         var warningLabel = UILabel()
         
         warningLabel.frame = warningRect
